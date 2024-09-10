@@ -1,6 +1,7 @@
 # Executive Detailed Report
 
-### Dashboard Link : https://app.powerbi.com/groups/me/reports/f1519ef6-47f1-48b1-a525-b708be991f01/85499c2125d0bf5718a7?experience=power-bi
+### Dashboard Link : 
+https://app.powerbi.com/groups/me/reports/f1519ef6-47f1-48b1-a525-b708be991f01/85499c2125d0bf5718a7?experience=power-bi
 
 ## Overview
 
