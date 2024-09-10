@@ -39,15 +39,55 @@ It provides holistic view of Customers' demographics alongwith the number of ord
 
 
 
-### Data Loading and Cleaning Process
+### Data Loading, Cleaning and Setup Process
 
 - Load data into Power BI Desktop, dataset is a csv file including Calendar Lookup, Customer Lookup, Product Lookup, Product Category Lookup, Product Subcategory Lookup, Returns Data, Sales Data 2020-22, Territory Lookup.
+- Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.
+- Transformed and cleaned the tables as follows:
 - - Calendar Lookup: From a single Date column, generated number of columns for Day Name, Week, Month, Quarter, Year
   -  Customer Lookup: Information related to Customers'demographics. Cleaned and standardized the data as required.
   -  Product Lookup: Different Products data that the company sells to generate revenue.
-  -  
-- Open power query editor & in view tab under Data preview section, check "column distribution", "column quality" & "column profile" options.
-- Step 3 : Also since by default, profile will be opened only for 1000 rows so you need to select "column profiling based on entire dataset".
+  -  Product Category Lookup: This outlines different category of the product the company sells.
+  -  Product Subcategory Lookup: This outlines different subcategory of the product the company sells.
+  -  Returns Data: Data for Return Product including Date and Product Key.
+  -  Territory Lookup: Continents, Country and Region data.
+    
+
+- After transforming and cleaning data, in Model view, linked the tables with each other in Star Topology using Primary-Foreign Keys with 1-to-many or many-to-many cardinalities. Sales Data and Returns Data Tables are Dimensions tables and rest are fact tables.
+
+  ![image](https://github.com/user-attachments/assets/232fe13a-471e-403d-988c-2aa4663ccab8)
+
+
+- In Table view, add some columns using DAX for ease of data retrieval before moving to Report View.
+
+![image](https://github.com/user-attachments/assets/ac5541e0-1569-49c4-ad19-4765809d53dc)
+
+
+
+### Report View Setup
+
+- In measure table, number of New DAX measure created including but not limited to Total Order, Total Revenue, Total Profit, Return Rate, Moving Averages etc.
+
+![image](https://github.com/user-attachments/assets/eda944d6-8220-4edd-b82c-2184721b364b)
+![image](https://github.com/user-attachments/assets/5393eaac-75b2-437a-b553-b771f757f543)
+
+
+## Exec Dashboard Page Main Visuals
+
+- In the top right, using new Card Visual, added Total Revenue, Profit, Orders and Return Rate %.
+- Left pane includes Reset button (to clear all filters using Bookmark), filter, and page navigators.
+- A line chart to display revenue across time (Months).
+- A bar chat to display orders by category.
+- Matrix table to display top 10 products. It can be used to drill-through to get details of the specific product.
+- At the bottom, single cards to display stats.
+
+
+## Product Detail Page Main Visuals
+
+- It displays stats for a single product. The selected product name verified from the left top name card.
+- The top row displays Monthly orders, revenue, profit of profit vs its target using Gauge visual. Numerical values will turn red if values are less than the target.
+- 
+-
 - Step 4 : It was observed that in none of the columns errors & empty values were present except column named "Arrival Delay".
 - Step 5 : For calculating average delay time, null values were not taken into account as only less than 1% values are null in this column(i.e column named "Arrival Delay") 
 - Step 6 : In the report view, under the view tab, theme was selected.
