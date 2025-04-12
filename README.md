@@ -14,7 +14,7 @@ This dashboard is a comprehensive business intelligence tool designed to provide
 ### Executive Dashboard: 
 A high-level overview of crucial metrics such as total revenue, profit, number of orders, and return rates. It provides a snapshot of the company's performance and tracks progress over time.
 
-![image](https://github.com/user-attachments/assets/c4a7fea1-3fe7-4af4-933d-ddc7ce2fe437)
+![image](https://github.com/user-attachments/assets/1c545f4c-4843-4631-ac8d-b5f4c163286d)
 
 
 
